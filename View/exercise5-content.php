@@ -8,7 +8,20 @@
       (You may use "skeleton" as the keyword if you can't think of anything else.)</h4>
     <!-- Place Answer Here -->
 
-      
+      <!-- input and p tag -->
+      <label for="brainInput">Enter Text:</label>
+      <input id="brainInput">
+      <p id="brainwashDisplay"></p>
+      <button id="brainwashButton" onClick="getKeyword(document.getElementById('brainInput').value)">Search</button>
+
+      <script>
+
+        function getKeyword(input)
+        {
+          document.getElementById("brainwashDisplay").innerHTML = "\"" + input + "\"";
+        }
+
+      </script>
 
     <!-- Place Answer Here -->
   </div>
