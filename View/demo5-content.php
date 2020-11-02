@@ -1,7 +1,7 @@
 <!-- Demo 5 JavaScript I -->
 
 <!-- Question 1 -->
-  <div class='student-response'>
+<div class='student-response'>
     <h1>Question #1:</h1>
     <h4>Create a paragraph tag and write your favorite video game titles into it using a script.</h4>
     <!-- Place Answer Here -->
@@ -48,8 +48,8 @@
     <p id="quoteLength"></p>
 
     <script>
-
      
+      //declare variable
       var quote = "\"There's no such thing as a good pun, only the bad ones are good ones.\"";
       
       //print quote
@@ -59,6 +59,7 @@
       document.getElementById("quoteLength").innerHTML = "There are " + quote.length + " characters.";
 
     </script>
+
     <!-- Place Answer Here -->
   </div>
 <!-- Question 3 -->
@@ -69,8 +70,18 @@
     <h4>Create an array of a few of your favorite foods, then display your absolute favorite from the list with a description.</h4>
     <!-- Place Answer Here -->
 
-      
+      <strong id=favoriteFoods></strong>
 
+      <script>
+      
+        //declare variable
+        var favFoods = ["French Fries", "Pizza", "Nuggies", "Mac n Cheese"];
+      
+        //print array
+        document.getElementById("favoriteFoods").innerHTML = favFoods[2] + " are my favorite with some good dippin sauce.";
+
+      </script>
+    
     <!-- Place Answer Here -->
   </div>
 <!-- Question 4 -->
@@ -81,7 +92,20 @@
     <h4>Create an array, then add an element value onto the end and display it without using indexes.</h4>
     <!-- Place Answer Here -->
 
+      <p id="arrayMethodDisplay"></p>
+
+      <script>
       
+      //create array
+      var inventoryItems = ["Sword", "Shield", "Coins"];
+      
+      //push function
+      inventoryItems.push("Healing Potion");
+
+      //print array display
+      document.getElementById("arrayMethodDisplay").innerHTML = inventoryItems[inventoryItems.length - 1];
+
+      </script>
 
     <!-- Place Answer Here -->
   </div>
@@ -93,7 +117,17 @@
     <h4>Create a date object for your birthday or some date special to you and write it to the document.</h4>
     <!-- Place Answer Here -->
 
+      <p id="dateDisplay"></p>
       
+      <script>
+      
+        //create date of special occasion (birthday)
+        var specialDate = new Date(2001, 6, 9);
+
+        //print date
+        document.getElementById("dateDisplay").innerHTML = specialDate;
+
+      </script>
 
     <!-- Place Answer Here -->
   </div>
@@ -105,7 +139,20 @@
     <h4>Get the current time and print it to a p tag span with description in the p tag.</h4>
     <!-- Place Answer Here -->
 
+      <p>The current time is: <span id="timeDisplay"></span></p>
       
+      <script>
+      
+
+        //create date variable for current time
+        var nowDate = new Date();
+
+        //print current time
+        document.getElementById("timeDisplay").innerHTML = nowDate.getHours() + ":" + nowDate.getMinutes();
+
+
+      
+      </script>
 
     <!-- Place Answer Here -->
   </div>
@@ -117,7 +164,7 @@
     <h4>Create a p tag that displays :| normally, and displays :D when waved over (or some other small art) using JS.</h4>
     <!-- Place Answer Here -->
 
-     
+      <p onMouseOver="innerHTML=':D'" onMouseOut="innerHTML=':|'">:|</p>
 
     <!-- Place Answer Here -->
   </div>
@@ -129,7 +176,22 @@
     <h4>Create a function that accepts a first name and last name, concatenates the two with a space between them, and returns them. Use this function to print your name to a p tag.</h4>
     <!-- Place Answer Here -->
 
-      
+      <p id="fullNameFunc"></p>
+
+      <script>
+
+      //function to append names
+      function getFullName(first, last)
+      {
+
+        //return appended names
+        return first + " " + last;
+        
+      }
+
+      document.getElementById("fullNameFunc").innerHTML = getFullName("Antonio", "Jennings");
+
+      </script>
 
     <!-- Place Answer Here -->
   </div>
@@ -142,7 +204,22 @@
       " -One of our happy customers" appended onto the end.</h4>
     <!-- Place Answer Here -->
       
+      <!-- input and p tag -->
+      <label for="happyCustomerInput">Quote Input:</label>
+      <input id="happyCustomerInput">
+      <p id="happyCustomerDisplay"></p>
+      <button id="customerQuoteButton" onClick="makeQuote(document.getElementById('happyCustomerInput').value)">Save Quote</button>
+
+      <script>
       
+      function makeQuote(input)
+      {
+        //print what was given with quote appended
+        document.getElementById("happyCustomerDisplay").innerHTML = "\"" + input + "\" -One of our happy customers.";
+
+      }
+      
+      </script>
 
     <!-- Place Answer Here -->
   </div>
