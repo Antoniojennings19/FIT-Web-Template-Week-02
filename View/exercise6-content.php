@@ -5,9 +5,43 @@
     <h1>Question #1:</h1>
     <h4>Create a dice class that holds an int attribute for the number of sides it has, and a roll function that rolls the dice and returns the outcome. 
       Add the elements and script needed so that a user can enter a number of sides and a number of times to roll; display on a button click.</h4>
+   
     <!-- Place Answer Here -->
       
+      <button id="button" onClick="getInventory(document.getElementById('inputOne').value)">Enter</button>
+      <input id="inputOne">
+      <p id="outcomeOne"></p>
+
+      <button id="button" onClick="getInventory(document.getElementById('inputOne').value)">Enter</button>
+      <input id="inputOne">
+      <p id="outcomeOne"></p>
+
+      <script>
+
+        //dice class
+        class dice{
+
+          constructor(diceSideVal){
+
+            this.side = diceSideVal;
+            
+          }
+        }
+
+        //function 
+        function diceRoll(input){
+          
+          
+        }
       
+      
+      
+      
+      
+      
+      
+      
+      </script>
 
     <!-- Place Answer Here -->
   </div>

@@ -18,7 +18,10 @@
 
         function getKeyword(input)
         {
-          document.getElementById("brainwashDisplay").innerHTML = "\"" + input + "\"";
+          var keyword = input.indexOf("nuggies");
+          var string1 = input.substring(keyword);
+
+          document.getElementById("brainwashDisplay").innerHTML = string1;
         }
 
       </script>
@@ -35,9 +38,35 @@
         while another input and button will be responsible for entering how many of that item is stored. 
         (Hint two arrays or a 2 dimensional array is needed)</h4>
     <!-- Place Answer Here -->
+      <label for="itemInput">Inventory Item:</label>
+      <input id="itemInput">
+      <button id="itemButton" onClick="getInventory(document.getElementById('itemInput').value)">Seach Inventory</button>
+      <p id="inventoryItem"></p>
+        
+      <label for="quantityInput">Inventory Quantity:</label>
+      <input id="quantityInput">
+      <button id="quantityButton" onClick="getQuantity(document.getElementById('quantityInput').value)">Set Quantity</button>
+      <p id="itemQuantity"></p>
+
+      <script>
+
+        var myGames = ["FFXIV", "Overwatch", "Sword Art Online", "Nier: Automata"];
+        var quantityItem = ["5", "10", "101", "2000"];
+        var inputVar = 0;
+
+        function getInventory(input)
+        {
+          document.getElementById("inventoryItem").innerHTML = myGames[input] + " | Quantity: " + quantityItem[input];
+          inputVar = input;
+        }
       
+        function getQuantity(quantity)
+        {
+          document.getElementById("itemQuantity").innerHTML = myGames[inputVar] + " has a quantity of " + (quantityItem[inputVar] = quantity);
+        }
 
-
+      </script>
+        
     <!-- Place Answer Here -->
   </div>
 <!-- Question 2 -->
