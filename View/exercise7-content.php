@@ -41,7 +41,6 @@
           <th>Actions</th>
         </tr>
     
-
     <?php
 
       for($index = 0; $index < count($creatureList); $index++){
