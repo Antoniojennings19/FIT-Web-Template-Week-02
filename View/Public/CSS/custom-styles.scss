@@ -253,7 +253,11 @@ p {
 
 //Question 1 Place Answer Here
 //Question 1 Place Answer Here
-
+@media only screen and (max-width: 1530px){
+  img#locationPic {
+    display: none;
+  }
+}
 //Question F2 Place Answer Here
 //Question F2 Place Answer Here
 
